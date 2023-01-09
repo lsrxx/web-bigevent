@@ -1,0 +1,58 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url(/assets/images/login_bg.jpg) no-repeat center;
+    /* 背景填充：铺满整个屏幕 */
+    background-size: cover;
+}
+
+.res-login {
+    height: 270px;
+    width: 350px;
+    background-color: #fff;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    translate 是使用的位移的方式，将盒子往回平移一半
+    transform: translate(-50%, -50%); */
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-title {
+    height: 40px;
+    background: url(/assets/images/login_title.png) no-repeat center;
+}
+
+.res-login {
+    padding: 10px 30px;
+}
+
+#logacount,
+#regacount {
+    /* display: flex;
+    justify-content: flex-end; */
+    margin-top: 10px;
+    float: right;
+}
+
+/* 子绝父相 定位图标 */
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input {
+    padding-left: 30px;
+}
