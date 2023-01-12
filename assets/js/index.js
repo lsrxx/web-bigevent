@@ -28,7 +28,7 @@ function getUserInfo() {
         success: function (res) {
             // console.log(res);
             if (res.status !== 0) return layui.layer.msg("获取信息失败");
-            console.log(res.data);
+            // console.log(res.data);
             rederAvantar(res.data);
         },
         // 控制用户的访问权限
@@ -48,15 +48,15 @@ function getUserInfo() {
 // 渲染头像
 function rederAvantar(data) {
     // 获取用户名
-    var name = data.nikename || data.username;
+    var name = data.nickname || data.username;
     $("#welcome").html('欢迎' + '\t\t' + name);
     // 获取头像
     if (data.user_pic) {
-        $(".layui-nav-img").attr(src, data.user_pic).show();
+        $(".layui-nav-img").attr('src', data.user_pic).show();
         $(".text-avatar").hide();
     } else {
         // 获取名字的第一个字，是字母就大写
-        var textAvatar = data.username[0].toUpperCase();
+        var textAvatar = name[0].toUpperCase();
         $(".layui-nav-img").hide();
         $(".text-avatar").html(textAvatar).show();
     }
